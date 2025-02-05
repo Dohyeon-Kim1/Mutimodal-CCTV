@@ -29,7 +29,6 @@ def detect_webcam(model):
             print("프레임을 가져올 수 없습니다.")
             break
 
-        # YOLO 객체 감지 (3초마다 수행)
         start_time = time.time()
         results = model.predict(frame, show=False)
         annotated_frame = results[0].plot()
